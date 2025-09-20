@@ -18,7 +18,7 @@ app.get('/',(req,res)=>{
 });
 
 
-mongoose.connect("mongodb+srv://sid20060329_db_user:iiYgFh4ZmM1evwBX@backenddb.b9plpln.mongodb.net/NODE-API?retryWrites=true&w=majority&appName=BackendDB")
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log("database is connected!");
     app.listen(3000,()=>{
